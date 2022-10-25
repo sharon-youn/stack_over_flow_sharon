@@ -1,69 +1,52 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Link  from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+      <>
       <Head>
-        <title>Stack Overflow - Where Developers Learn, Share, & Build Careers</title>
-        <meta name="description" content="Stack Overflow is the largest, most trusted online community for developers to learn, share their programming knowledge, and build their careers." />
-        <link rel="icon" href="/Stack_Overflow_icon.svg.png" />
-      </Head>
+      <title>Stack Overflow - Where Developers Learn, Share, & Build Careers</title>
+      <meta name="description" content="Stack Overflow is the largest, most trusted online community for developers to learn, share their programming knowledge, and build their careers." />
+      <link rel="icon" href="/Stack_Overflow_icon.svg.png" />
+    </Head>
+    <div>
+      <div className='d-flex'>
+      <h1 className='flex--item fl1 fs-headline1'>Top Questions</h1>
+      <div className="ml12 aside-cta flex--item print:d-none">
+      <Link href="/questions/ask">
+      <a className='ws-nowrap s-btn s-btn__primary'>Ask Question</a>
+      </Link>
+      </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div>
+        <div className='flex--item fl1 fs-body3'></div>
+        <div className='flex--item'>
+          <div className='d-flex s-btn-group js-filter-btn'>
+            <a className='js-sort-preference-change flex--item s-btn s-btn__muted s-btn__outlined'>Interesting</a>
+            <a className='js-sort-preference-change flex--item s-btn s-btn__muted s-btn__outlined'>Hot</a>
+            <a className='js-sort-preference-change flex--item s-btn s-btn__muted s-btn__outlined'>Week</a>
+            <a className='js-sort-preference-change flex--item s-btn s-btn__muted s-btn__outlined'>Month</a>
+          </div>ç
         </div>
-      </main>
+      </div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <style jsx>{`
+      /* h1 {
+        font-size: 2.07692308rem;
+        line-height: 1.3;
+         margin: 0 0 1em;
+         flex: 1 auto !important;
+      } */
+      .btn {
+        margin-left: 1 !important;
+      }
+      .d-flex {
+        display: flex !important;
+      }
+      `}</style>
+      </div>
+
     </div>
+    </>
   )
 }
