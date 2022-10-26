@@ -15,7 +15,7 @@ export default function SideBar() {
         <style jsx>{`
         .sidebar-box {
             border:1px solid red;
-            width: 320px;
+            width: 17rem;
             height: 400px;
             display: flex;
             align-items: center;
