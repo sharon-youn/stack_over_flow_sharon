@@ -52,17 +52,17 @@ export default function Questions() {
                <div key={movie.id} className="post-main">
                 {/* 투표수, 답변수, views 일단 하드코딩  */}
                  <div className='votes'>
-                  <div className='s-post-summary--stats js-post-summary-stats'>
-                    <span className='s-post-summary--stats-item-number'>0</span>
-                    <span className='s-post-summary--stats-item-unit'>votes</span>
+                  <div className=''>
+                    <span className=''>0</span>
+                    <span className=''>votes</span>
                   </div>
-                  <div className='s-post-summary--stats js-post-summary-stats'>
-                    <span className='s-post-summary--stats-item-number'>0</span>
-                    <span className='s-post-summary--stats-item-unit'>answers</span>
+                  <div className=''>
+                    <span className=''>0</span>
+                    <span className=''>answers</span>
                   </div>
-                  <div className='s-post-summary--stats js-post-summary-stats'>
-                    <span className='s-post-summary--stats-item-number'>0</span>
-                    <span className='s-post-summary--stats-item-unit'>views</span>
+                  <div className=''>
+                    <span className=''>0</span>
+                    <span className=''>views</span>
                   </div>
                 </div> 
                  
@@ -147,7 +147,6 @@ export default function Questions() {
         }
 
         .qlist-wrapper{
-
           clear: both;
         }
        .flush-left{

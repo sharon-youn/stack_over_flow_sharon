@@ -32,9 +32,7 @@ export default function Home() {
           flex: 1 2 0;
           display: flex;
         }
-    
 
-   
         
       `}</style>
     </div>
