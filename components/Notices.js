@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SideBar() {
+export default function Notices() {
   return (
     <div className='sidebar'>
     <div className='main-sidebar'>

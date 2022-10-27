@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 import Questions from '../components/Questions';
 import Seo from '../components/Seo';
-import SideBar from '../components/SideBar';
+import Notices from '../components/Notices';
 
 export default function TopQuestions() {
   return (
@@ -16,7 +16,7 @@ export default function TopQuestions() {
   {/* 메인  */}
  <div id="content">
   <Questions/>
-    <SideBar/>
+    <Notices/>
   </div>
   <style jsx>{`
     .container {

@@ -118,7 +118,7 @@ export default function Questions() {
         height: 2.5rem; 
         background-color:#0a95ff;
         color: white;
-        box-shadow: inset 0 1px 0 0 rgba(198, 194, 194, 0.4);
+        box-shadow: inset 0 0.2rem rgba(198, 194, 194, 0.4);
         display: flex;
         align-items: center;
         justify-content: center;
