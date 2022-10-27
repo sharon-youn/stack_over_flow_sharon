@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Header() {
+export default function HeaderFake() {
   return (
     <div className='header'>
       <div>Stack over flow </div>

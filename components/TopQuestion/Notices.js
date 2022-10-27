@@ -5,7 +5,7 @@ export default function Notices() {
     <div className='sidebar'>
     <div className='main-sidebar'>
       <div className='sidebar-box'>
-          <ul className='d-block p0 m0'>
+          <ul>
 
             <li className='li-title'>The Overflow Blog</li>
             

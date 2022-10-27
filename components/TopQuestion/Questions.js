@@ -1,10 +1,12 @@
 import Link  from 'next/link';
 import React, { useEffect, useState } from 'react'
-import agoraStatesDiscussions from '../static/dummydata';
+import agoraStatesDiscussions from '../../static/dummydata';
+import FilterBtn from './FilterBtn';
+import TopHeader from './TopHeader';
 
 
 export default function Questions() {
-  const [movies, setMovies] = useState([])
+  // const [movies, setMovies] = useState([])
   // useEffect(()=> {
   //   (async () => {
   //    const {results} = await (
@@ -14,39 +16,13 @@ export default function Questions() {
   //     setMovies(results)
   //   })()
   // }, [])
-
   
   return (
     <div id="mainbar">
     {/* Top Questions 부분  */}
-      <div className='top'>
-        <h1 className='top_h1'>Top Questions</h1>
-            <div className="ask">
-              <Link href="/questions/ask">
-              <a className='askQ'>Ask Question</a>
-              </Link>
-            </div>
-        </div>
+      <TopHeader/>
     {/* Interesting, Hot~ 버튼들  */}
-      <div className='main_filter'>
-        <div className='filter_space'></div>
-        <div className='filter-box'>
-          <div className='filter'>
-            <Link href="/?tab=interesting">
-            <a className='filterbtn filter_radius'>Interesting</a>
-            </Link>
-            <Link href="/?tab=hot">
-            <a className='filterbtn'>Hot</a>
-            </Link>
-            <Link href="/?tab=week">
-            <a className='filterbtn'>Week</a>
-            </Link>
-            <Link href="/?tab=month">
-            <a className='filterbtn filter_radius2'>Month</a>
-            </Link>
-          </div>
-        </div>
-      </div>
+     <FilterBtn/>
     {/* 밑에 질문들 map으로 깔아주기  */}
     <div id="qlist-wrapper" className='flush-left'>
       <div id="question-mini-list">
@@ -106,74 +82,6 @@ export default function Questions() {
           flex: 1 1 0;
           padding: 20px;
         }
-      .top {
-          display:flex;
-          flex-direction: row;
-        }
-        .top_h1 {
-          font-size: 2rem;
-        }
-      .ask {
-        width: 7rem;
-        height: 2.5rem; 
-        background-color:#0a95ff;
-        color: white;
-        box-shadow: inset 0 0.2rem rgba(198, 194, 194, 0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 3px;
-      }
-      .ask:hover {
-        background-color: #076ab6;
-        transition: 0.5s;
-      }
-      .askQ {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-  
-      }
-      h1 {
-        flex: 1 1 0;
-        font-size: 1.5rem;
-        font-weight:400;
-      }
-
-      .filterbtn{
-        border: 1px solid #838c95;
-        padding: 0.7rem;
-        flex-basis: auto;
-        font-size: 13px;
-        border-right: none;
-        color: rgb(118, 118, 118);
-      }
-      .filterbtn:hover {
-        background-color: rgb(207, 205, 205);
-        transition: 0.5s;
-      }
-      .filter_radius {
-        border-radius:5px 0 0 5px ;
-      }
-      .filter_radius2 {
-        border-radius: 0 5px 5px 0;
-        border-right: 1px solid #838c95;
-      }
-        
-     .filter_space {
-      flex: 1 auto !important;
-      }  
-    .main-filter {
-          display: flex !important;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
-      .filter {
-          display: flex;
-          justify-content: flex-end;
-        }
-
         .qlist-wrapper{
           clear: both;
         }

@@ -1,15 +1,14 @@
 import React from 'react'
-import Header from '../../components/Header'
-import AskNotice from '../../components/question/AskNotice'
-import AskSide from '../../components/question/AskSide'
-import AskTitle from '../../components/question/AskTitle'
-import AskProblem from '../../components/question/AskProblem'
-import AskTry from '../../components/question/AskTry'
-import AskTags from '../../components/question/AskTags'
-import SubmissionBtn from '../../components/question/SubmissionBtn'
-import AskSeo from '../../components/question/AskSeo'
-
-import Footer from '../../components/Footer'
+import Header from '../../../components/HeaderFake'
+import AskNotice from '../../../components/question/AskNotice'
+import FakeSide from '../../../components/question/FakeSide'
+import AskTitle from '../../../components/question/AskTitle'
+import AskProblem from '../../../components/question/AskProblem'
+import AskTry from '../../../components/question/AskTry'
+import AskTags from '../../../components/question/AskTags'
+import SubmissionBtn from '../../../components/question/SubmissionBtn'
+import AskSeo from '../../../components/question/AskSeo'
+import FooterFake from '../../../components/FooterFake'
 
 
 export default function Ask() {
@@ -19,7 +18,7 @@ export default function Ask() {
      <Header/>
 
     <div className='container'>
-     <AskSide/>
+     <FakeSide/>
       <div className='content'>
         <div className='box-border'>
             <form className='post-form'>
@@ -45,6 +44,7 @@ export default function Ask() {
         flex: 1 1 0;
         display: flex;
         width: 100%;
+        overflow-x: hidden;
       }
       .content {
         width: 75rem;
@@ -55,7 +55,7 @@ export default function Ask() {
   
         `}</style>
     </div>
-    <Footer/>
+    <FooterFake/>
     </>
   )
   

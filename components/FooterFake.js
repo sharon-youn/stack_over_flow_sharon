@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Footer() {
+export default function FooterFake() {
   return (
     <div>
       <div className='footer'>

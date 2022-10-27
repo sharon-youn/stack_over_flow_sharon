@@ -1,16 +1,15 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import NavBar from '../components/NavBar';
-import Questions from '../components/Questions';
-import Seo from '../components/Seo';
-import Notices from '../components/Notices';
+import NavBar from '../NavBarFake';
+import Questions from './Questions';
+import Seo from './Seo';
+import Notices from './Notices';
+import HeaderFake from '../HeaderFake';
 
 export default function TopQuestions() {
   return (
     <>
     <Seo/>
-    <Header/>
+    <HeaderFake/>
 <div className='container'>
    <NavBar/>
   {/* 메인  */}
