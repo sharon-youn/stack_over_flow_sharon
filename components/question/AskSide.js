@@ -4,7 +4,7 @@ export default function AskSide() {
   return (
     <div>
         <div className='ask'>
-        AskSide
+        Navbar 에용
 
         </div>
       <style jsx>{`

@@ -20,7 +20,7 @@ export default function Questions() {
     <div id="mainbar">
     {/* Top Questions 부분  */}
       <div className='top'>
-        <h1>Top Questions</h1>
+        <h1 className='top_h1'>Top Questions</h1>
             <div className="ask">
               <Link href="/questions/ask">
               <a className='askQ'>Ask Question</a>
@@ -81,6 +81,9 @@ export default function Questions() {
                         </Link>
                         </div>
                         <div className='usercard'>
+                          <div className='human_img'> 
+                          <img src="/human.png" width={15} height={15}></img>
+                          </div>
                         {tweet.author}
                         <div className='asked'>
                          1,339 asked 52 secs ago
@@ -103,6 +106,9 @@ export default function Questions() {
       .top {
           display:flex;
           flex-direction: row;
+        }
+        .top_h1 {
+          font-size: 2rem;
         }
       .ask {
         width: 6rem;
@@ -133,9 +139,11 @@ export default function Questions() {
 
       .filterbtn{
         border: 1px solid #838c95;
-        padding: 8px;
+        padding: 0.7rem;
         flex-basis: auto;
         font-size: 13px;
+        border-right: none;
+        color: rgb(118, 118, 118);
       }
       .filterbtn:hover {
         background-color: rgb(207, 205, 205);
@@ -146,6 +154,7 @@ export default function Questions() {
       }
       .filter_radius2 {
         border-radius: 0 5px 5px 0;
+        border-right: 1px solid #838c95;
       }
         
      .filter_space {
@@ -214,7 +223,10 @@ export default function Questions() {
           position: relative;
           display: flex;
           border-bottom: 1px solid #e3e6e8;
-          padding: 16px;;
+          padding: 1.2rem;
+          padding-left: 3.2rem;
+          font-size: 1.2rem;
+          
         }
         .post-meta {
           display: flex;
@@ -226,6 +238,9 @@ export default function Questions() {
           font-size: 0.8rem;
           color: #0074cc;
         
+        }
+        .human_img {
+          margin-right: 0.3rem;
         }
         .tags {
           color:#2c5877;

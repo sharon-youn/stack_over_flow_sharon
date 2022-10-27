@@ -7,6 +7,18 @@ export default function SideBar() {
       <div className='sidebar-box'>
           <ul className='d-block p0 m0'>
             <li className='li-title'>The Overflow Blog</li>
+              <li className='blog-content'>
+                <div>
+                  <img src='/overflow_pencil.png' width={23} height={23}></img>
+                </div>
+                <div>Goodbye Webpack, hello Turbopack! The big news from today’s Next.JS conference</div>
+              </li>
+              <li className='blog-content'>
+                <div>
+                  <img src='/overflow_pencil.png' width={23} height={23}></img>
+                </div>
+                <div>Goodbye Webpack, hello Turbopack! The big news from today’s Next.JS conference</div>
+              </li>
             <div>
             </div>
           </ul>
@@ -37,6 +49,9 @@ export default function SideBar() {
             display: flex;
         }
         .sidebar {
+          display: flex;
+        }
+        .blog-content {
           display: flex;
         }
         `}</style>

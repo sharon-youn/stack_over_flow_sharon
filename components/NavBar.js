@@ -23,7 +23,7 @@ export default function NavBar() {
         }
         .nav {
           height: 40rem;
-          width: 14rem;
+          width: 17rem;
           background-color: #8ecbfa;
           display: flex;
           flex-direction: column;

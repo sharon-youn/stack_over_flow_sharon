@@ -7,12 +7,15 @@ import AskProblem from '../../components/question/AskProblem'
 import AskTry from '../../components/question/AskTry'
 import AskTags from '../../components/question/AskTags'
 import SubmissionBtn from '../../components/question/SubmissionBtn'
+import AskSeo from '../../components/question/AskSeo'
+
 import Footer from '../../components/Footer'
 
 
 export default function Ask() {
   return (
     <>
+    <AskSeo/>
      <Header/>
 
     <div className='container'>
