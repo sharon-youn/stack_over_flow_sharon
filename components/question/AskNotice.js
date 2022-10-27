@@ -85,6 +85,17 @@ export default function Notice() {
         }
 
       }
+      @media screen (max-width: 1000px) {
+        img {
+         display: none;
+        }
+        .ask-question {
+          padding-bottom: 7%;
+          display: inline-block;
+          margin-top: 5%;
+        }
+
+      }
         `}</style>
     </div>
   )

@@ -152,6 +152,7 @@ export default function AskTitle() {
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
+            align-items: flex-start;
           }
           .writing-list {
             padding: 3%;
@@ -161,11 +162,19 @@ export default function AskTitle() {
             margin-bottom: -4%;
 
           }
-          .idea2 {
-            margin-top: -4%;
-            margin-bottom: -4%;
-
-          }
+          img {
+         display: none;
+        }
+      
+        .idea {
+          margin: 0;
+          padding: 0;
+        }
+        .idea2 {
+          margin: 0;
+          padding: 0;
+          margin-bottom: -10%;
+        }
       
         }
         @media screen (max-width:1100px) {
@@ -180,6 +189,8 @@ export default function AskTitle() {
             width: 3rem;
          }
         }
+      
+      
 
           `}</style>
         </div>
