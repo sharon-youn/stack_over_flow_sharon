@@ -52,10 +52,11 @@ export default function AskTitle() {
         .title-box{
             border: 1px solid #e3e6e8;
             width: 53rem;
-            height: 9rem;
+            height: 10rem;
             background-color: #ffffff;
             padding-top: 1rem;
             padding-left: 1rem;
+            border-radius: 3px;
          
         }
         .title-content {

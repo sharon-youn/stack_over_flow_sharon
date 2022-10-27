@@ -34,6 +34,8 @@ export default function AskProblem() {
         width: 53rem;
         height: 18rem;
         margin-top: 1rem;
+        border-radius: 3px;
+
     }
     .problem-outer {
         margin: 1.5rem;

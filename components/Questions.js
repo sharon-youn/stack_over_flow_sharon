@@ -72,18 +72,21 @@ export default function Questions() {
                 {/* 질문들 나오는 곳  */}
                 <div className='post-content'>
                   <h3 className='post-title'>
+                    <Link href="">
                   <a className='post-link'>{tweet.title}</a>
+                    </Link>
                   </h3>
+                  {/* 태그, 작성자 */}
                   <div className='post-meta'>
                       <div className='post-tags'>
-                        <Link href="">
-                        <a className='tags'>tags</a>
-                        </Link>
+                          <Link href="">
+                          <a className='tags'>tags</a>
+                          </Link>
                         </div>
                         <div className='usercard'>
-                          <div className='human_img'> 
-                          <img src="/human.png" width={15} height={15}></img>
-                          </div>
+                            <div className='human_img'> 
+                            <img src="/human.png" width={15} height={15}></img>
+                            </div>
                         {tweet.author}
                         <div className='asked'>
                          1,339 asked 52 secs ago
@@ -111,11 +114,11 @@ export default function Questions() {
           font-size: 2rem;
         }
       .ask {
-        width: 6rem;
-        height: 2rem; 
+        width: 7rem;
+        height: 2.5rem; 
         background-color:#0a95ff;
         color: white;
-        box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 40%);
+        box-shadow: inset 0 1px 0 0 rgba(198, 194, 194, 0.4);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,7 +132,7 @@ export default function Questions() {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 13px;
+  
       }
       h1 {
         flex: 1 1 0;
@@ -232,6 +235,10 @@ export default function Questions() {
           display: flex;
           justify-content: space-between;
           margin-top: 0.6rem;
+          width: 40rem;
+        }
+        .post-link:hover {
+          color: #49acf7;
         }
         .usercard{
           display: flex;
@@ -257,7 +264,7 @@ export default function Questions() {
           border-radius: 2px;
         }
         .asked {
-          color: black;
+          color: gray;
           margin-left: 1rem;
         }
         `}</style>

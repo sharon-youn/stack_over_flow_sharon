@@ -34,6 +34,8 @@ export default function AskTags() {
         width: 53rem;
         height: 10rem;
         margin-top: 1rem;
+        border-radius: 3px;
+
     }
     .tags-outer {
         margin: 1.5rem;
