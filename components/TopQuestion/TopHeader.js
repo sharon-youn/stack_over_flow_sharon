@@ -15,17 +15,18 @@ export default function TopHeader() {
             .top {
                 display:flex;
                 flex-direction: row;
+                margin-top: 2% ;
+
             }
             .top_h1 {
-                font-size: 2rem;
-                flex: 1 1 0;
                 font-size: 1.5rem;
+                flex: 1 1 0;
                 font-weight:400;
             }
             
             .ask {
-                width: 7rem;
-                height: 2.5rem; 
+                width: 15%;
+                height: 60%; 
                 background-color:#0a95ff;
                 color: white;
                 box-shadow: inset 0 0.2rem rgba(198, 194, 194, 0.4);

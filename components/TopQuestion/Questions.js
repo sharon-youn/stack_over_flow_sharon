@@ -80,40 +80,46 @@ export default function Questions() {
           display: flex;
           flex-direction: column;
           flex: 1 1 0;
-          padding: 20px;
+          padding: 1.5%;
+          width: 100%;
+        
         }
         .qlist-wrapper{
           clear: both;
+          width: 100%;
+        }
+        .question-mini-list{
+          width: 100%;
         }
        .flush-left{
-        margin-top: 20px;
+        margin-top: 2%;
         border-top: 1px solid #e3e6e8; 
-        margin-left: -20px;
+        margin-left: -2%;
        }
       .votes-status {
           gap: 10;
-          margin-right: 10px;
-          margin-bottom: 6px;
-          width: 100px;
+          margin-right: 3%;
+          margin-bottom: 1%;
+          width: 10%;
           display: flex;
           flex-direction: column;
           flex-shrink: 0;
           flex-wrap: wrap;
           align-items: flex-end;
-          font-size: 10px;
+          font-size: 1rem;
           color: gray;
         }
         .votes-list {
           font-size: 0.8rem;
-          margin-bottom: 0.3rem;
+          margin-bottom: 5%;
         }
         .votes-item {
-          margin-right: 0.2rem;
+          margin-right: 3%;
         }
         .plus {
           color: #2f6f44;
          border: 1px solid #2f6f44;
-         padding: 0.2rem;
+         padding: 6%;
         }
         .vote {
           color: black;
@@ -121,29 +127,27 @@ export default function Questions() {
         
        .post-title {
           flex-grow: 1;
-         max-width: 100%;
          color: #0074cc;
          margin: 0;
         padding: 0;
         border: 0;
         font: inherit;
         font-size: 100%;
-        vertical-align: baseline;
         }
         .post-main {
           position: relative;
           display: flex;
           border-bottom: 1px solid #e3e6e8;
-          padding: 1.2rem;
-          padding-left: 3.2rem;
+          padding: 2%;
+          padding-left: 7%;
           font-size: 1.2rem;
           
         }
         .post-meta {
           display: flex;
           justify-content: space-between;
-          margin-top: 0.6rem;
-          width: 40rem;
+          margin-top: 2%;
+          width: 100%;
         }
         .post-link:hover {
           color: #49acf7;
@@ -155,7 +159,7 @@ export default function Questions() {
         
         }
         .human_img {
-          margin-right: 0.3rem;
+         
         }
         .tags {
           color:#2c5877;
@@ -164,7 +168,7 @@ export default function Questions() {
           font-size: 0.8rem;
           text-decoration: none;
           display: inline-block;
-          padding: 0.4em 0.5em;
+          padding: 20% 30%;
           white-space: nowrap;
           text-align: center;
           border-width: 1px;
@@ -173,7 +177,7 @@ export default function Questions() {
         }
         .asked {
           color: gray;
-          margin-left: 1rem;
+          margin-left: 5%;
         }
         `}</style>
     </div>

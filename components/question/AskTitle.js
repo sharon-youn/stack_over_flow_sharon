@@ -69,7 +69,7 @@ export default function AskTitle() {
         }
         .title-label {
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 800;
         }
         .detail-label{
             font-size: 0.8rem;

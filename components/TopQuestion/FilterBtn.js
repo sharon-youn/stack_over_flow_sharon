@@ -24,7 +24,7 @@ export default function FilterBtn() {
         <style jsx>{`
         .filterbtn{
         border: 1px solid #838c95;
-        padding: 0.7rem;
+        padding: 1.5%;
         flex-basis: auto;
         font-size: 13px;
         border-right: none;

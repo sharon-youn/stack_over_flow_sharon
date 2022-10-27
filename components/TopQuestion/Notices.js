@@ -78,8 +78,8 @@ export default function Notices() {
         <style jsx>{`
         .sidebar-box {
             border:1px solid red;
-            width: 19rem;
-            height: 30rem;
+            width: 60%;
+           
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -87,8 +87,7 @@ export default function Notices() {
 
             border-color: #f1e5bc;
             background-color: #fdf7e2;
-            margin-top: 28px;
-            margin-right: 120px;
+            margin-top: 9%;
             border-radius: 5px;
         }
         .li-title {
@@ -96,17 +95,16 @@ export default function Notices() {
             background-color: #fbf3d5;
             list-style: none;
             font-size: 0.8rem;
+            padding: 3%;
             font-weight: bold;
-            height: 2.4rem;
             color: rgb(95, 95, 95);
-            display: flex;
-            align-items: center;
+            height: 20%;
             padding-left: 1rem;
   
         }
         .blog-body{
-          font-size: 0.8rem;
-          padding: 0.3rem;
+          font-size: 0.9rem;
+          padding: 2%;
           display:flex;
     
         }
@@ -119,6 +117,7 @@ export default function Notices() {
         }
         .main-sidebar {
             display: flex;
+            flex-direction: column;
         }
         .sidebar {
           display: flex;
@@ -127,6 +126,11 @@ export default function Notices() {
           display: flex;
           padding: 0.3rem;
         }
+        {/* @media screen (max-width:1000px ) {
+          .sidebar{
+            display: none;
+          }
+        } */}
         `}</style>
     </div>
     </div>
