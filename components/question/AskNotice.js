@@ -35,14 +35,13 @@ export default function Notice() {
       .ask {
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
         width: 75rem;
       }
       .ask-question {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 10rem;
+        height: 8.5rem;
         width: 100%;
       }
       .question {
@@ -54,11 +53,11 @@ export default function Notice() {
         display: flex;
       }
       .notice {
-        background: rgb(218, 235, 246);
+        background: rgb(224, 238, 248);
         border: 1px solid rgb(156, 181, 250);
         border-radius: 3px;
-        width: 50rem;
-        height: 17rem;
+        width: 53rem;
+        height: 16rem;
         display: flex;
         flex-direction: column;
         justify-content: center;

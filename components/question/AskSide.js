@@ -9,7 +9,7 @@ export default function AskSide() {
         </div>
       <style jsx>{`
         .ask {
-            background-color: rgb(249, 249, 141);
+            background-color: rgb(255, 255, 255);
             width: 10rem;
             height:40rem
         }
