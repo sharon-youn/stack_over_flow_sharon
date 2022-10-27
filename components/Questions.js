@@ -1,7 +1,7 @@
 import Link  from 'next/link';
 import React, { useEffect, useState } from 'react'
 import agoraStatesDiscussions from '../static/dummydata';
-import dummyVotes from '../static/votes';
+
 
 export default function Questions() {
   const [movies, setMovies] = useState([])
@@ -14,7 +14,7 @@ export default function Questions() {
   //     setMovies(results)
   //   })()
   // }, [])
-  console.log(agoraStatesDiscussions)
+
   
   return (
     <div id="mainbar">

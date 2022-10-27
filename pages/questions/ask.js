@@ -1,56 +1,29 @@
 import React from 'react'
+import Header from '../../components/Header'
+import Notice from '../../components/Notice'
+
+import AskSide from '../../components/AskSide'
 
 export default function Ask() {
   return (
+    <>
+     <Header/>
+
     <div className='container'>
+     <AskSide/>
       <div className='content'>
         <div className='box-border'>
             <form className='post-form'>
 
               <main className='question-form'>
-                <div className='ask'>
-                    <div className='ask-question'>
-                        <h2 className='question'>Ask a public question</h2>
-                    </div>
-                    <div className='writing'>
-                    <div className='notice'>  
-                      <h2 className='good-question'>Writing a good question</h2>
-                      <p>
-                      You’re ready to ask a programming-related question and this form will help guide you through the process.
-                      </p>
-                      <p>
-                       Looking to ask a non-programming question? See the topics here to find a relevant site.
-                       </p>
-                      <h5>Steps</h5>
-                      <ul className='steps'>
-                        <li>
-                        Summarize your problem in a one-line title.
-                        </li>
-                        <li>
-                        Describe your problem in more detail.
-                        </li>
-                        <li>
-                        Describe what you tried and what you expected to happen.
-                        </li>
-                        <li>
-                        Add “tags” which help surface your question to members of the community.
-                        </li>
-                        <li>
-                        Review your question and post it to the site.
-                        </li>
-  
-                        
-                      </ul>
-                    </div>
-                    </div>
-                    </div>
+               <Notice/>
                         {/* Writing a good title, title 부분  */}
                     <div className='title'>
                       <div className='writing'>
                           <div className='writing-name'>
                             Writing a good title
                           </div>
-                          <img src="/good-title.png" width={50} height={50}/>
+                          <img src="/good-title.png" width={50} height={50} />
                           <div className='writing-content'>
                             <p>Your title should summarize the problem.</p>
                             <p>You might find that you have a better idea of your title after writing out the rest of the question.</p>
@@ -161,21 +134,22 @@ export default function Ask() {
 
       </div>
       <style jsx>{`
-      .ask {
+       
+      .container {
+        background-color: rgb(248, 249, 249);
+        flex: 1 1 0;
         display: flex;
-        flex-direction: column;
-        border: 1px solid black;
+        width: 100%;
       }
-      .ask-question {
-        display: flex;
-        border: 1px solid red;
+      .content {
+        border: 1px solid blue;
+        width: 75rem;
+
       }
-      .question {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
+      
         `}</style>
     </div>
+    </>
   )
   
 }
