@@ -127,7 +127,7 @@ export default function Notices() {
           padding: 0.3rem;
         }
       
-        @media screen (max-width:1100px ) {
+        @media screen and (max-width:1100px ) {
           .sidebar-box {
             display: none;
           }

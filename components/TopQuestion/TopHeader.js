@@ -47,13 +47,13 @@ export default function TopHeader() {
                 font-size: 0.9rem;
         
             }
-        @media screen (max-width:1330px ) {
+        @media screen and (max-width:1330px ) {
             .ask {
                  width: 15%; 
             }
       
                  } 
-         @media screen (max-width:1200px ) {
+         @media screen and (max-width:1200px ) {
             .ask {
                  width: 17%; 
             }

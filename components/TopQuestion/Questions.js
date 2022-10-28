@@ -184,7 +184,7 @@ export default function Questions() {
           margin-left: 2%;
         }
       
-        @media screen (max-width:1300px ) {
+        @media screen and (max-width:1300px ) {
         .post-main {
           width: 100%;
           display: flex;
@@ -195,7 +195,7 @@ export default function Questions() {
         }
          
         } 
-        @media screen (max-width:1100px ) {
+        @media screen and (max-width:1100px ) {
          #mainbar {
             width: 100%;
           }
@@ -204,7 +204,7 @@ export default function Questions() {
           }
          
         } 
-        @media screen (max-width:700px ) {
+        @media screen  and (max-width:700px ) {
          #mainbar {
             width: 100%;
           }
