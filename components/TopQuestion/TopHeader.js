@@ -15,15 +15,19 @@ export default function TopHeader() {
             .top {
                 display:flex;
                 flex-direction: row;
-                margin-top: 2% ;
 
             }
             .top_h1 {
                 font-size: 1.6rem;
                 flex: 1 1 0;
                 font-weight:400;
+                margin-left: 3%;
             }
-            
+            a{
+            text-align: center;
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit;
+            }
             .ask {
                 flex-basis: auto;
                 width: 13%;

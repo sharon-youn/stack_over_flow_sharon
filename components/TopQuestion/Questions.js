@@ -80,11 +80,10 @@ export default function Questions() {
           display: flex;
           flex-direction: column;
           padding: 1.5%;
-          width: 80%;
+          width: 100%;
         
         }
         .qlist-wrapper{
-          clear: both;
           width: 100%;
         }
         .question-mini-list{
@@ -183,6 +182,11 @@ export default function Questions() {
           color: gray;
           margin-left: 2%;
         }
+        a{
+        text-align: center;
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        color: inherit;
+      }
       
         @media screen and (max-width:1300px ) {
         .post-main {
@@ -201,6 +205,7 @@ export default function Questions() {
           }
           .post-main {
             justify-content: space-around;
+            
           }
          
         } 

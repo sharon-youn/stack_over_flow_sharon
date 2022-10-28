@@ -1,15 +1,12 @@
-import TopQuestions from '../components/TopQuestion/TopQuestions';
-
+import TopQuestions from "../components/TopQuestion/TopQuestions";
 
 
 
 export default function Home() {
-
-
   return (
-      <> 
-     <TopQuestions/>
+    <>
+      <TopQuestions />
     </>
-    
-  )
+
+  );
 }

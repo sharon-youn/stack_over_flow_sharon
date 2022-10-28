@@ -1,13 +1,17 @@
-import Layout from '../components/HomeLayout'
-import '../styles/globals.css'
+import Layout from "../components/Layout";
 
-
-function MyApp({ Component, pageProps }) {
+const Myapp = ({ Component, pageProps }) => {
+  const getLayout = Component.getLayout || ((page) => page);
   return (
     <Layout>
-  <Component {...pageProps} />
-  </Layout>
-  )
-}
+      {getLayout(<Component {...pageProps}></Component>)}
+      <style jsx global>{`
+        body {
+          margin: 0;
+        }
+      `}</style>
+    </Layout>
+  );
+};
 
-export default MyApp
+export default Myapp;
