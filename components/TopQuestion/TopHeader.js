@@ -19,14 +19,15 @@ export default function TopHeader() {
 
             }
             .top_h1 {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 flex: 1 1 0;
                 font-weight:400;
             }
             
             .ask {
-                width: 15%;
-                height: 60%; 
+                flex-basis: auto;
+                width: 13%;
+                height: 55%; 
                 background-color:#0a95ff;
                 color: white;
                 box-shadow: inset 0 0.2rem rgba(198, 194, 194, 0.4);
@@ -43,8 +44,21 @@ export default function TopHeader() {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-size: 0.9rem;
         
             }
+        @media screen (max-width:1330px ) {
+            .ask {
+                 width: 15%; 
+            }
+      
+                 } 
+         @media screen (max-width:1200px ) {
+            .ask {
+                 width: 17%; 
+            }
+      
+                 }  
                 `}</style>
         </div>
   )

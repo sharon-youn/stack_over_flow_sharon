@@ -1,4 +1,5 @@
 import React from 'react'
+import NextBtn from './NextBtn'
 
 export default function AskTitle() {
   return (
@@ -25,7 +26,7 @@ export default function AskTitle() {
              </div>
            </div>
 
-         <button className='nextbtn s-btn'>Next</button>
+         <NextBtn/>
        </div>
        {/* writing box  */}
        <div className='writing-box'>
@@ -46,7 +47,6 @@ export default function AskTitle() {
             </div>
          </div>
           <style jsx>{`
-       
 
         .title {
          display: flex;
@@ -177,19 +177,7 @@ export default function AskTitle() {
         }
       
         }
-        @media screen (max-width:1100px) {
-          .nextbtn{
-            width: 3rem;
-         }
 
-        }
-      
-        @media screen (max-width:600px) {
-          .nextbtn{
-            width: 3rem;
-         }
-        }
-      
       
 
           `}</style>

@@ -1,19 +1,31 @@
 import React from 'react'
 
-export default function AskSide() {
+export default function FakeSide() {
   return (
-    <div>
+    <div className='nav'>
         <div className='ask'>
         Navbar 에용
 
         </div>
       <style jsx>{`
+        .nav{
+          width: 10%;
+        }
         .ask {
             background-color: rgb(255, 255, 255);
-            width: 10rem;
+
             height:40rem
         }
-        `}</style>
+        @media screen (max-width: 1340px) {
+          .nav{
+           width: 5%;
+          }
+          .ask {
+            display: none;
+          }
+        }
+
+        `}</style>  
     </div>
   )
 }

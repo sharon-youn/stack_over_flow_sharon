@@ -43,10 +43,10 @@ export default function FilterBtn() {
       }
         
      .filter_space {
-      flex: 1 auto !important;
+      flex: 1 auto;
       }  
     .main-filter {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;

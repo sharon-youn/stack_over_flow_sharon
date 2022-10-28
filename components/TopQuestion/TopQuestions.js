@@ -19,12 +19,10 @@ export default function TopQuestions() {
   </div>
   <style jsx>{`
     .container {
-       flex: 1 1 0;
         width: 100%;
       display: flex;
       }
       #content {
-        flex: 1 2 0;
         display: flex;
       }
     `}</style>

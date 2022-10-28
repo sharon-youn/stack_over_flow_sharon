@@ -23,7 +23,7 @@ export default function NavBar() {
         }
         .nav {
           height: 40rem;
-          width: 17rem;
+          width: 20rem;
           background-color: #8ecbfa;
           display: flex;
           flex-direction: column;
@@ -31,6 +31,12 @@ export default function NavBar() {
           align-items: center;
           
         }
+        @media screen (max-width:700px ) {
+       .nav{
+        display: none;
+       }
+         
+        } 
         
         `}</style>
     </div>

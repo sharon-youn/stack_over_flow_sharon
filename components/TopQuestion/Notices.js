@@ -78,7 +78,7 @@ export default function Notices() {
         <style jsx>{`
         .sidebar-box {
             border:1px solid red;
-            width: 60%;
+            width: 70%;
            
             display: flex;
             flex-direction: column;
@@ -87,7 +87,7 @@ export default function Notices() {
 
             border-color: #f1e5bc;
             background-color: #fdf7e2;
-            margin-top: 9%;
+            margin-top: 8%;
             border-radius: 5px;
         }
         .li-title {
@@ -126,11 +126,13 @@ export default function Notices() {
           display: flex;
           padding: 0.3rem;
         }
-        {/* @media screen (max-width:1000px ) {
-          .sidebar{
+      
+        @media screen (max-width:1100px ) {
+          .sidebar-box {
             display: none;
           }
-        } */}
+      
+        } 
         `}</style>
     </div>
     </div>

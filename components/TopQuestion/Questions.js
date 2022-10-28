@@ -79,9 +79,8 @@ export default function Questions() {
       #mainbar{
           display: flex;
           flex-direction: column;
-          flex: 1 1 0;
           padding: 1.5%;
-          width: 100%;
+          width: 80%;
         
         }
         .qlist-wrapper{
@@ -124,7 +123,9 @@ export default function Questions() {
         .vote {
           color: black;
         }
-        
+        .post-content {
+          width: 100%;
+        }
        .post-title {
           flex-grow: 1;
          color: #0074cc;
@@ -156,10 +157,13 @@ export default function Questions() {
           display: flex;
           font-size: 0.8rem;
           color: #0074cc;
+          width: 50%;
+          justify-content: flex-end;
+          align-items: center;
         
         }
         .human_img {
-         
+         margin-right: 2%;
         }
         .tags {
           color:#2c5877;
@@ -177,8 +181,41 @@ export default function Questions() {
         }
         .asked {
           color: gray;
-          margin-left: 5%;
+          margin-left: 2%;
         }
+      
+        @media screen (max-width:1300px ) {
+        .post-main {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        .post-content {
+          width: 80%;
+        }
+         
+        } 
+        @media screen (max-width:1100px ) {
+         #mainbar {
+            width: 100%;
+          }
+          .post-main {
+            justify-content: space-around;
+          }
+         
+        } 
+        @media screen (max-width:700px ) {
+         #mainbar {
+            width: 100%;
+          }
+          .post-content {
+            width: 75%;
+          }
+          .post-main {
+            justify-content: space-around;
+          }
+         
+        } 
         `}</style>
     </div>
   )
