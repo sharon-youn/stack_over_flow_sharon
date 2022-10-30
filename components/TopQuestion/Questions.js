@@ -18,7 +18,7 @@ export default function Questions() {
   // }, [])
   
   return (
-    <div id="mainbar">
+    <div className="top_mainbar">
     {/* Top Questions 부분  */}
       <TopHeader/>
     {/* Interesting, Hot~ 버튼들  */}
@@ -76,11 +76,12 @@ export default function Questions() {
        </div>
       </div>
       <style jsx>{`
-      #mainbar{
+      .top_mainbar{
           display: flex;
           flex-direction: column;
           padding: 1.5%;
           width: 100%;
+          
         
         }
         .qlist-wrapper{
@@ -92,7 +93,7 @@ export default function Questions() {
        .flush-left{
         margin-top: 2%;
         border-top: 1px solid #e3e6e8; 
-        margin-left: -2%;
+ 
        }
       .votes-status {
           gap: 10;
@@ -201,7 +202,7 @@ export default function Questions() {
         } 
         @media screen and (max-width:1100px ) {
          #mainbar {
-            width: 100%;
+            width: 90%;
           }
           .post-main {
             justify-content: space-around;
@@ -220,6 +221,9 @@ export default function Questions() {
             justify-content: space-around;
           }
          
+        } 
+        @media screen  and (min-width:830px ) {
+        
         } 
         `}</style>
     </div>

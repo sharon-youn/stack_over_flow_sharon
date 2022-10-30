@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Google from "../../components/Google";
-import Github from "../../components/Github";
+import Google from "../../components/social/Google";
+import Github from "../../components/social/Github";
 
 export default function Login() {
   return (
-    <div className="container">
-      <div id="content" className="d-flex flex_center">
+    <div className="logincontainer">
+      <div id="loginContent" className="d-flex flex_center">
         <div className="flexItem">
           <div className="ta-center">
             <div className="logo">
@@ -29,10 +29,10 @@ export default function Login() {
           </div>
           <div className="socialLogin">
             <div className="socialLoginBtn">
-              <Google></Google>
+              <Google />
             </div>
             <div className="socialLoginBtn">
-              <Github></Github>
+              <Github />
             </div>
           </div>
           <div className="formContainer">
@@ -130,14 +130,14 @@ export default function Login() {
           justify-content: center;
           align-items: center;
         }
-        .container {
+        .logincontainer {
           height: 100vh;
           background-color: rgb(241 242 243);
           display: flex;
           justify-content: center;
           margin: 0;
         }
-        #content {
+        #loginContent {
           display: flex;
           align-items: center;
           justify-content: center;

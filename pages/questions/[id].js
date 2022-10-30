@@ -8,28 +8,27 @@ import SideBar from "../../components/SideBar";
 const Editor = dynamic(() => import("../../components/Editor.js"), {
   ssr: false,
 });
-// editor server-side-rendering  off 로직??
+// editor server-side-rendering  off 로직
 
 export default function AskDetail() {
   const [isBtnClick, setIsBtnClick] = useState(false);
 
   return (
     <>
-      <Header />
       
-      <div className="container">
+      <div className="answermaincontainer">
         <h1 className="questionTitle">질문 제목</h1>
         <div className="questionContainer">
           <div className="qusetionInfoContainer">
-            <span> Asked 7 to day</span>
+            <span> Asked day</span>
             <span> Modified today</span>
-            <span>Viewed 22k times </span>
+            <span>Viewed 1 times </span>
           </div>
           <div className="questionComentBox">
             <span className="questionComent">질문 내용</span>
           </div>
           <div className="questionUpdate">
-            <span>edited 24 min ago</span>
+            <span>edited 1 min ago</span>
           </div>
         </div>
         <hr className="bar" />
@@ -59,7 +58,7 @@ export default function AskDetail() {
               <button className="editButton">Edit</button>
               <button className="deleteButton">Delete</button>
             </div>
-            <span className="answerUpdate">edited 22 min ago</span>
+            <span className="answerUpdate">edited 2 min ago</span>
           </div>
         </div>
         <hr className="bar" />
@@ -70,9 +69,7 @@ export default function AskDetail() {
         <div className="answerPostButtonContainer">
           <button className="answerPostButton">Post Your Answer</button>
         </div>
-        
       </div>
-          
       <style jsx>{`
         {
           /* isBtnClick 상태의 따라 색상이 바뀌도록 삼항 연산자로 작성. */
@@ -84,34 +81,30 @@ export default function AskDetail() {
           align-items: center;
         }
         .editorContainer {
-          width: 60%;
+          width: 68%;
+          margin-left: 10%
         }
-
         .questionTitle {
           font-weight: 400;
-          margin-left: -450px;
+          margin-left: -550px;
         }
-
         .questionContainer {
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 60%;
+          width: 80%;
           height: 300px;
         }
-
         .qusetionInfoContainer {
           display: flex;
           justify-content: space-between;
           width: 50%;
-
           margin-bottom: 40px;
           margin-left: -150px;
         }
-
         .questionComentBox {
-          width: 500px;
-          height: 150px;
+          width: 60%;
+          height: 100%;
           background-color: #ecf0f1;
         }
         .questionComent {
@@ -126,29 +119,31 @@ export default function AskDetail() {
           margin-top: 20px;
         }
         .bar {
-          width: 60%;
-          margin: 20px 0px;
+          width: 70%;
+          margin: 5px 95px;
         }
         .answerContainer {
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
-          width: 60%;
+          width: 70%;
         }
         .answerCount {
-          margin-left: -550px;
+          margin-left: -650px;
           font-weight: 300;
         }
         .icon {
-          width: 12%;
-          height: 150%;
+          width: 13%;
+          height: 100%;
+          margin-left: -30%;
+          
           fill: ${isBtnClick ? "green" : "gray"};
           cursor: pointer;
         }
         .answerCommentBox {
-          width: 500px;
-          height: 180px;
+          width: 550px;
+          height: 200px;
           background-color: #ecf0f1;
         }
         .answerComment {
@@ -166,6 +161,7 @@ export default function AskDetail() {
           display: flex;
           justify-content: start;
           width: 50%;
+        
         }
         .deleteButton {
           margin-left: 10px;
@@ -179,14 +175,12 @@ export default function AskDetail() {
           font-size: 22px;
           height: 10px;
         }
-
         .answerPostButtonContainer {
           display: flex;
           justify-content: start;
           width: 60%;
           margin-top: 30px;
         }
-
         .answerPostButton {
           font-size: 24px;
           font-weight: 400;
@@ -194,8 +188,10 @@ export default function AskDetail() {
           border: solid #67b9f3 1px;
           background-color: #67b9f3;
           padding: 1% 3%;
+          margin-left: 17%;
           border-radius: 7px;
           cursor: pointer;
+          margin-bottom: 20px;
         }
       `}</style>
     </>

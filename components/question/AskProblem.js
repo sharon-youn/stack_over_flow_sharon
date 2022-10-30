@@ -26,10 +26,8 @@ export default function AskProblem() {
                 </div>
               {/* problem 내용  */}
               <div className='problem-body-box'>
-              <textarea className='problem-body' placeholder='여기에 문제를 써주세요.'>
-                </textarea>
+                <Editor/>
               </div>
-              <NextBtn/>
           </div>
         </div>
       </div>
@@ -46,7 +44,7 @@ export default function AskProblem() {
 
     }
     .problem-outer {
-        margin: 3% 3% 1% 3%;
+        margin: 3% 3% 3% 3%;
     }
     .problem-title {
       margin-bottom: 1.5%;

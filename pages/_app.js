@@ -1,4 +1,6 @@
 import Layout from "../components/Layout";
+import wrapper from "../store/configureStore";
+import PropTypes from "prop-types";
 
 const Myapp = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || ((page) => page);
@@ -13,5 +15,7 @@ const Myapp = ({ Component, pageProps }) => {
     </Layout>
   );
 };
-
-export default Myapp;
+Myapp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+};
+export default wrapper.withRedux(Myapp);
