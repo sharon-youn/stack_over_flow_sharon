@@ -1,12 +1,7 @@
-import dynamic from 'next/dynamic';
+
 import React from 'react'
 import NextBtn from './NextBtn'
 
-
-const Editor = dynamic(() => import ("../Editor.js"), {
-  ssr: false,
-});
-// editor server-side-rendering  off 로직??
 
 export default function AskProblem() {
   return (
@@ -26,7 +21,8 @@ export default function AskProblem() {
                 </div>
               {/* problem 내용  */}
               <div className='problem-body-box'>
-                <Editor/>
+              <textarea className='problem-body' placeholder='여기에 문제를 써주세요.'>
+                </textarea>
               </div>
           </div>
         </div>
@@ -64,7 +60,6 @@ export default function AskProblem() {
       height: 100%;
     }
     .problem-body-box{
-        border: 1px solid #e3e6e8;
         height: 100%;
     }
     .problem-body {

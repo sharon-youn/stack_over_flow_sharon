@@ -1,10 +1,15 @@
 import Layout from "../components/Layout";
 import wrapper from "../store/configureStore";
 import PropTypes from "prop-types";
+import { store } from "../redux/storeQ";
+import { Provider } from "react-redux";
+
+
 
 const Myapp = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || ((page) => page);
   return (
+    <Provider store={store}>
     <Layout>
       {getLayout(<Component {...pageProps}></Component>)}
       <style jsx global>{`
@@ -13,6 +18,7 @@ const Myapp = ({ Component, pageProps }) => {
         }
       `}</style>
     </Layout>
+    </Provider>
   );
 };
 Myapp.propTypes = {
