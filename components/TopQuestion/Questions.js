@@ -76,9 +76,9 @@ export default function Questions() {
                         </div>
                         <div className='usercard'>
                             <div className='human_img'> 
-                            <Image src="/human.png" alt="human-image" width={15} height={15}></Image>
+                            <img src="/human.png" alt="human-image" width={15} height={15}></img>
                             </div>
-                        {tweet.userId}
+                        {tweet.author}
                         <div className='asked'>
                          1,339 asked 52 secs ago
                          </div>

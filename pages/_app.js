@@ -1,15 +1,18 @@
 import Layout from "../components/Layout";
 import wrapper from "../store/configureStore";
 import PropTypes from "prop-types";
-import { store } from "../redux/storeQ";
-import { Provider } from "react-redux";
+import { useState } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools"
 
 
 
 const Myapp = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || ((page) => page);
+  const [queryClient] = useState(()=> new QueryClient())
+
   return (
-    <Provider store={store}>
+    <QueryClientProvider client={queryClient}>
     <Layout>
       {getLayout(<Component {...pageProps}></Component>)}
       <style jsx global>{`
@@ -18,7 +21,8 @@ const Myapp = ({ Component, pageProps }) => {
         }
       `}</style>
     </Layout>
-    </Provider>
+    <ReactQueryDevtools initialIsOpen={false} />
+       </QueryClientProvider>
   );
 };
 Myapp.propTypes = {
