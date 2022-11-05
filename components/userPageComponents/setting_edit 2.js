@@ -3,28 +3,24 @@ import SubTap from "./subTap";
 export default function saves_qustions() {
   const fileInputRef = useRef(null);
 
+  const [profileImage, setProfileImage] = useState(null);
   const [aboutText, setAboutText] = useState("");
-  let files = "";
 
-  const handleClickFileInput = (e) => {
+  const handleClickFileInput = () => {
     fileInputRef.current.click();
   };
-
-  const handleChangeFile = (e) => {
-    files = e.target.files;
-  };
-
-  const handleClickSubmit = () => {
-    const fd = new FormData();
-    fd.append("file", files[0]);
-    for (let key of fd.values()) {
-      console.log(key);
-    }
+  const onImgSubmit = async (e) => {
+    console.dir(e.target.files[0]);
+    const formData = new FormData(); // formData 객체를 생성한다.
+    formData.append("File", files[0]);
+    console.log(formData);
+    setProfileImage(formData);
   };
 
   return (
     <div id="main-content">
       <SubTap></SubTap>
+
       <div id="EditFrofile">
         <label className="Title">Edit Frofile</label>
         <div className="contentBox">
@@ -36,14 +32,18 @@ export default function saves_qustions() {
                 width="100%"
                 height="100%"
               ></img>
-              <div className="changePicure">
+              <div onSubmit={(e) => onImgSubmit(e)} className="changePicure">
                 <input
                   type="file"
                   className="upload"
                   ref={fileInputRef}
-                  onChange={handleChangeFile}
+                  onChange={onImgSubmit}
                 />
-                <button className="uploadBtn" onClick={handleClickFileInput}>
+                <button
+                  type="submit"
+                  className="uploadBtn"
+                  onClick={handleClickFileInput}
+                >
                   Change picture
                 </button>
               </div>
@@ -67,9 +67,7 @@ export default function saves_qustions() {
             <div>{aboutText}</div>
           </div>
           <div className="btnBox">
-            <button className="saveBtn" onClick={handleClickSubmit}>
-              Save profile
-            </button>
+            <button className="saveBtn">Save profile</button>
             <button className="cancelBtn">Cancel</button>
           </div>
         </div>
@@ -202,7 +200,7 @@ export default function saves_qustions() {
         }
         #main-content {
           display: flex;
-          width: auto;
+          width: 100%;
           margin: 0;
           margin-top: 40px;
           padding: 0;
@@ -210,7 +208,6 @@ export default function saves_qustions() {
           font: inherit;
           font-size: 100%;
           vertical-align: baseline;
-          margin-bottom: 50px;
         }
         .Title {
           display: block;
@@ -228,6 +225,7 @@ export default function saves_qustions() {
         .contentBox {
           margin-top: 20px;
           text-align: center;
+          width: 100%;
           height: auto;
           min-width: 450px;
           padding: 32px;

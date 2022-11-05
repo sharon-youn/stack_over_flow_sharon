@@ -1,85 +1,130 @@
 import Link from "next/link";
-import Google from "../../components/social/Google";
-import Github from "../../components/social/Github";
-
+import Google from "../../components/social/GoogleLogin";
+import Github2 from "../../components/social/Github2";
+import { useState } from "react";
 export default function Login() {
+  const [userEmail, setUserEmail] = useState("");
+  const [userEmailReg, setUserEmailReg] = useState(true);
+  const [userPw, setUserPw] = useState("");
+  const [userPwReg, setUserPwReg] = useState(true);
+  const emailReg = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+  const validation = () => {
+    emailReg.test(userEmail) ? setUserEmailReg(true) : setUserEmailReg(false);
+    userPw.length > 0 ? setUserPwReg(true) : setUserPwReg(false);
+    if (emailReg.test(userEmail) & (userPw.length > 0)) {
+      alert("로그인 요청");
+    }
+  };
+  const handleClickSignUp = (e) => {
+    e.preventDefault();
+    validation();
+  };
   return (
-    <div className="logincontainer">
-      <div id="loginContent" className="d-flex flex_center">
-        <div className="flexItem">
-          <div className="ta-center">
-            <div className="logo">
+    <div id="loginBox" className="flexItem">
+      <div className="ta-center">
+        <div className="logo">
+          <Link href="/">
+            <a>
+              <svg
+                className="svg-icon"
+                width="32"
+                height="37"
+                viewBox="0 0 32 37"
+              >
+                <path d="M26 33v-9h4v13H0V24h4v9h22Z" fill="#BCBBBB"></path>
+                <path
+                  d="m21.5 0-2.7 2 9.9 13.3 2.7-2L21.5 0ZM26 18.4 13.3 7.8l2.1-2.5 12.7 10.6-2.1 2.5ZM9.1 15.2l15 7 1.4-3-15-7-1.4 3Zm14 10.79.68-2.95-16.1-3.35L7 23l16.1 2.99ZM23 30H7v-3h16v3Z"
+                  fill="#F48024"
+                ></path>
+              </svg>
+            </a>
+          </Link>
+        </div>
+      </div>
+      <div className="socialLogin">
+        <div className="socialLoginBtn">
+          <Google />
+        </div>
+        <div className="socialLoginBtn2">
+          <Github2 />
+        </div>
+      </div>
+      <div className="formContainer">
+        <form id="login-form" className="d-flex fd-column">
+          <div id="input" className="d-flex fd-column">
+            <label className="lable" form="email">
+              Email
+            </label>
+            <input
+              className={userEmailReg ? "input" : "failed"}
+              onChange={(e) => setUserEmail(e.target.value)}
+            ></input>
+            <div className="failedWord">
+              {userEmailReg
+                ? null
+                : userEmail.length > 0
+                ? "The email is not a valid email address."
+                : "Email cannot be empty."}
+            </div>
+          </div>
+          <div className="d-flex fd-column">
+            <div className="d-flex ai-center jc-space-between">
+              <label className="lable">Password</label>
               <Link href="/">
-                <a>
-                  <svg
-                    className="svg-icon"
-                    width="32"
-                    height="37"
-                    viewBox="0 0 32 37"
-                  >
-                    <path d="M26 33v-9h4v13H0V24h4v9h22Z" fill="#BCBBBB"></path>
-                    <path
-                      d="m21.5 0-2.7 2 9.9 13.3 2.7-2L21.5 0ZM26 18.4 13.3 7.8l2.1-2.5 12.7 10.6-2.1 2.5ZM9.1 15.2l15 7 1.4-3-15-7-1.4 3Zm14 10.79.68-2.95-16.1-3.35L7 23l16.1 2.99ZM23 30H7v-3h16v3Z"
-                      fill="#F48024"
-                    ></path>
-                  </svg>
-                </a>
+                <a>Forgot password?</a>
               </Link>
             </div>
-          </div>
-          <div className="socialLogin">
-            <div className="socialLoginBtn">
-              <Google />
-            </div>
-            <div className="socialLoginBtn">
-              <Github />
-            </div>
-          </div>
-          <div className="formContainer">
-            <form id="login-form" className="d-flex fd-column">
-              <div id="input" className="d-flex fd-column margin-T-B">
-                <label className="lable" form="email">
-                  Email
-                </label>
-                <input className="input"></input>
-              </div>
-              <div className="d-flex fd-column margin-T-B">
-                <div className="d-flex ai-center jc-space-between">
-                  <label className="lable">Password</label>
-                  <Link href="/">
-                    <a>Forgot password?</a>
-                  </Link>
-                </div>
-                <input className="input"></input>
-              </div>
-              <button className="s-btn">Log in</button>
-            </form>
-          </div>
-          <div className="assistance">
-            <div className="margin-T-B">
-              {`Don't have an account? `}
-              <Link href="/">
-                <a href="/">Sign up</a>
-              </Link>
-            </div>
-            <div className="margin-T-B">
-              {`Are you an employer? `}
-              <Link href="/">
-                <a>
-                  Sign up on Talent
-                  <svg id="footIcon" width="14" height="14" viewBox="0 0 14 14">
-                    <path
-                      d="M5 1H3a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V9h-2v2H3V3h2V1Zm2 0h6v6h-2V4.5L6.5 9 5 7.5 9.5 3H7V1Z"
-                      fill="#3399ff"
-                    ></path>
-                  </svg>
-                </a>
-              </Link>
+            <input
+              className={userPwReg ? "input" : "failed"}
+              onChange={(e) => setUserPw(e.target.value)}
+            ></input>
+            <div className="failedWord">
+              {userPwReg ? null : "Password cannot be empty."}
             </div>
           </div>
+          <button className="s-btn" onClick={handleClickSignUp}>
+            Log in
+          </button>
+        </form>
+      </div>
+      <div className="assistance">
+        <div className="margin-T-B">
+          {`Don't have an account? `}
+          <Link href="/users/signup">
+            <a>Sign up</a>
+          </Link>
+        </div>
+        <div className="margin-T-B">
+          {`Are you an employer? `}
+          <Link href="/">
+            <a>
+              Sign up on Talent
+              <svg id="footIcon" width="14" height="14" viewBox="0 0 14 14">
+                <path
+                  d="M5 1H3a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V9h-2v2H3V3h2V1Zm2 0h6v6h-2V4.5L6.5 9 5 7.5 9.5 3H7V1Z"
+                  fill="#3399ff"
+                ></path>
+              </svg>
+            </a>
+          </Link>
         </div>
       </div>
       <style jsx>{`
+        .failedWord {
+          color: red;
+          height: 15px;
+          margin-top: 5px;
+          font-size: small;
+        }
+        .failed {
+          -webkit-appearance: none;
+          width: auto;
+          margin: 0;
+          padding: 0.6em 0.7em;
+          border-radius: 3px;
+          border: 1px solid red;
+          font-size: 1rem;
+        }
         .socialLogin {
           display: flex;
           flex-direction: column;
@@ -88,7 +133,7 @@ export default function Login() {
         }
         .socialLoginBtn {
           margin-top: 4px;
-          margin-bottom: 4px;
+          margin-bottom: 8px;
         }
         #footIcon {
           text-align: center;
@@ -164,9 +209,6 @@ export default function Login() {
         #login-form {
           margin: 12px;
         }
-        .input {
-          margin: 0;
-        }
         .lable {
           margin: 4px;
           margin-right: 0;
@@ -188,9 +230,9 @@ export default function Login() {
         }
         .s-btn {
           color: white;
+          margin-top: 10px;
           margin-right: 0;
           margin-left: 0;
-          margin: 1px;
           background-color: hsl(206, 100%, 52%);
           box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 40%);
           position: relative;
@@ -215,6 +257,14 @@ export default function Login() {
           margin-bottom: 24px;
           margin-left: auto;
           margin-right: auto;
+        }
+        #loginBox {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 20px;
+          height: 100%;
         }
       `}</style>
     </div>

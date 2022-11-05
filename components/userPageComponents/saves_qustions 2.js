@@ -1,19 +1,19 @@
-import MyAnsers from "./MyAnsers";
+import MyQusticons from "./MyQuestions";
 import SubTap from "./subTap";
 export default function saves_qustions() {
   return (
     <div id="main-content">
       <SubTap></SubTap>
-      <div id="ansers">
-        <label className="lable">My Ansers</label>
+
+      <div id="questions">
+        <label className="lable">My Questions</label>
         <div className="contentBox">
-          <MyAnsers></MyAnsers>
+          <MyQusticons></MyQusticons>
         </div>
       </div>
       <style jsx>{`
-        #ansers {
+        #questions {
           width: 100%;
-          height: 600px;
           margin-left: 1rem;
         }
         a {
@@ -42,12 +42,14 @@ export default function saves_qustions() {
         }
         .contentBox {
           display: flex;
-          align-items: flex-end;
+          align-items: center;
           justify-content: flex-start;
+          margin-top: 20px;
           text-align: center;
-          width: 100%;
-          height: 500px;
+          width: 65%;
           min-width: 700px;
+          height: auto;
+          padding: 5px;
         }
         #subTap {
           margin-right: 20px;

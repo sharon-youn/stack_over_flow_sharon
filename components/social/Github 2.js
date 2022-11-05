@@ -5,15 +5,13 @@ const Github = () => {
   return (
     <div>
       <button type="signin">
-      <Image src="/images/g.png" alt="google" width="15" height="15" margin-right= "5px"/>
-       <a href="https://github.com/login/oauth/authorize?client_id=2279e95e66c9924578c7&scope=repo:status read:repo_hook user:email&redirect_uri=http://localhost:3000/users/login">Log in with Github</a>
+      <Image src="/images/g.png" alt="google" width="15" height="15"/>
+       <a>Sign in with Github</a>
        </button>
       <style jsx>
         {`
         a {
           margin-left: 5px;
-          text-decoration-line: none;
-          color: white;
         }
         button {
           background: rgb(36,38,42);
@@ -26,15 +24,11 @@ const Github = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 13px;
+          font-size: 10px;
         }
         button :hover {
           background: black;
-        }
-        img {
-          weight: 10px;
-          height: 10px;
-        }
+        }    
         `}
       </style>
     </div>

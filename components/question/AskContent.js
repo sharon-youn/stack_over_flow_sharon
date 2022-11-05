@@ -1,11 +1,48 @@
 import Image from 'next/image'
-import React from 'react'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react'
 
 export default function AskContent() {
+  const router = useRouter();
+
+  const [title, setTitle] = useState('')
+  const [body, setBody] = useState('')
+
+  
+  const handleSubmit = (e) => {
+    console.log("안녕")
+    e.preventDefault();
+    const data = {
+      title: title,
+      body: body
+    }
+    console.log(data)
+
+  fetch(`/post/50`, {
+    method: "POST",
+    headers: {"Content-Type" : "application/json"},
+    body: JSON.stringify(data)
+  })
+  .then((res) => {
+    console.log(res)
+    // router.push("/")
+
+    // window.location.reload();
+  })
+  .catch((error)=> {
+    console.log('Error', error)
+  })
+
+  }
+
+ 
 
 
   return (
     <>
+    
+  <form onSubmit={handleSubmit}>
     <div className='title'>
     {/* Title 글씨 */}
   <div className='title-box'>
@@ -28,7 +65,11 @@ export default function AskContent() {
            <input 
            className='title-input'
            type="text"
-           placeholder='e.g. Is there an R function for finding the index of an element in a vector?'></input>
+           placeholder='e.g. Is there an R function for finding the index of an element in a vector?'
+           value={title}
+           onChange={(e)=> setTitle(e.target.value)
+          }
+           ></input>
        </div>
      </div>
 
@@ -40,7 +81,7 @@ export default function AskContent() {
             Writing a good title
        </div>
        <div className='writing-content'>
-        <img className='writing-img' alt="good-title-content" src="/good-title.png" width={50} height={50} />
+        <img className='writing-img' src="/good-title.png" width={50} height={50} />
          
         <li className='writing-list'>
           <div className='writing-body idea2'>Your title should summarize the problem.</div>
@@ -71,7 +112,13 @@ export default function AskContent() {
                 </div>
               {/* problem 내용  */}
               <div className='problem-body-box'>
-              <textarea className='problem-body' placeholder='여기에 문제를 써주세요.'>
+              <textarea 
+              className='problem-body' 
+              placeholder='여기에 문제를 써주세요.'
+              value={body}
+              onChange={(e)=> setBody(e.target.value)}
+              >
+                
                 </textarea>
               </div>
           </div>
@@ -79,33 +126,29 @@ export default function AskContent() {
       </div>
     </div>
     </div>
-
-    {/* 태그 부분 */}
-    <div className='tags-box'>
-    <div className='tags-outer'>
-      <div>
-        <div className='tags-margin'>
-          <div className='tags-content'>
-            {/* tags 제목 */}
-              <div className='tags-title'>
-                <label className='tags-name'>
-                Tags
-                <p className='tags-p'>
-                Add up to 5 tags to describe what your question is about. Start typing to see suggestions.
-                </p>
-                </label>
-                </div>
-              {/* tags 내용  */}
-              <div className='tags-body-box'>
-                <input className='tags-body' placeholder='태그를 써주세요'>
-                </input>
+    
+        {/* 제출버튼 */}
+        <div className='button-box'>
+            <div className='button-list'>
+                <div className='reviewbtn'>
+                
+              <button 
+              type='submit'
+              className='s-btn nextbtn'
+              >
+                Review your queston
+                </button>
+              
               </div>
-
+              <div className='reviewbtn'>
+                <Link href="/">
+              <a className='s-btn draftbtn'>Discard draft</a>
+              </Link>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    </div>
+        </form>
+
   <style jsx>{`
 
   .title {
@@ -334,7 +377,93 @@ export default function AskContent() {
             width: 90%;
           }
         }
+        .button-box{ 
+        margin-bottom: 5%;
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3%;
+        width: 100%;
       
+        }
+        .button-list {
+            display: flex;
+            width: 100%;
+        }
+        .nextbtn{
+            color: #ffffff;
+            background-color: #0a95ff;
+            box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 40%);
+            width: 13vw;
+            flex-basis: auto;
+            font-size: 0.9rem;
+            border-radius: 0.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+           outline: 0;
+           padding: 5%;
+           text-decoration: none;
+           cursor: pointer;    
+         
+
+        }
+        .nextbtn:hover{
+          background-color: #77c0f8;
+          transition: 0.5s;
+        }
+        .draftbtn{
+            color: #c22e32;
+            background-color: #00000000;
+            box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 40%);
+            width: 13vw;
+            margin-left: 25%;
+            font-size: 0.9rem;
+            border-radius: 0.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+           outline: 0;
+           padding: 5%;
+           text-decoration: none;
+            cursor: pointer;
+        }
+        .draftbtn:hover{
+          background-color: rgb(253, 238, 238);
+          transition: 0.5s;
+        }
+        @media screen and (max-width: 1280px)  {
+          .nextbtn, .draftbtn{
+            width: 17vw;
+          }
+          
+        }
+        @media screen and (max-width: 900px)  {
+          .nextbtn{
+            width: 22vw;
+          }
+          
+          .draftbtn{
+            width: 17vw;
+
+          }
+         
+          
+        }
+        @media screen and (max-width: 700px)  {
+          .nextbtn{
+            width: 29vw;
+          }
+          
+          .draftbtn{
+            width: 17vw;
+
+          }
+         
+          
+        }
 
     `}</style>
   </>
